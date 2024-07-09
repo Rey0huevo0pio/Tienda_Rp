@@ -1,3 +1,8 @@
+<?php
+// Inicia la sesión al comienzo del archivo PHP
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,9 +16,18 @@
 <body>
     <header>
         <h1>MayShop</h1>
+
         <div class="user-options">
-            
-            <a href="./Inicio_sesion.php"><span class="material-icons">login</span>Iniciar Sesión</a>
+            <?php if(isset($_SESSION['user_id'])){
+            ?>
+            <a href="#" class=" btn btn-success"><i class="fas fa-user"></i> <?php echo $_SESSION['user_name'];?></a>
+          <?php } else {?>
+            <a href="./Inicio_sesion.html" class="btn btn-success"><i class="fas fa-user"></i>Iniciar sesion..</a>
+            <?php } ?>
+
+
+
+
             <a href="#"><span class="material-icons">favorite_border</span>Favoritos</a>
             <a href="#"><span class="material-icons">shopping_cart</span>Compras</a>
         </div>
@@ -89,7 +103,6 @@
                     <li><a href="#">Más texto</a></li>
                 </ul>
             </div>
-            
         </div>
         <div class="social-links">
             <a href="#"><span class="material-icons">facebook</span></a>
