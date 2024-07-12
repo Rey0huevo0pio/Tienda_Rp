@@ -1,0 +1,39 @@
+.heart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.heart-button:hover img {
+    transform: scale(1.2);
+}
+
+.welcome-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
